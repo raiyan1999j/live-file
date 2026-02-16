@@ -857,7 +857,7 @@ body {
 
 @media (min-width: 1024px) {
   .feature-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -871,14 +871,15 @@ body {
   position: relative;
   height: 100%;
   border-radius: 1.25rem;
-  padding: 0.5rem;
+  padding: 1px;
+  /* Thinner border for cleaner look */
   background: transparent;
 }
 
 @media (min-width: 768px) {
   .glowing-card-border {
     border-radius: 1.5rem;
-    padding: 0.75rem;
+    padding: 1px;
   }
 }
 
@@ -890,18 +891,28 @@ body {
   justify-content: space-between;
   gap: 1.5rem;
   overflow: hidden;
-  border-radius: 0.75rem;
-  border: 0.75px solid #e2e8f0;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(226, 232, 240, 0.5);
   background-color: #fff;
   padding: 1.5rem;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease;
 }
 
 .dark .glowing-card-content {
-  background-color: #0f172a;
-  /* Dark background */
-  border-color: #1e293b;
-  box-shadow: 0px 0px 27px 0px rgba(45, 45, 45, 0.3);
+  background-color: #000;
+  /* Pure black like in screenshot */
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+.dark .glowing-card-content h3 {
+  color: #fff;
+}
+
+.dark .glowing-card-content p,
+.dark .glowing-card-content h2 {
+  color: #94a3b8;
 }
 
 /* The Glowing Effect Container */
