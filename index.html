@@ -1,1331 +1,1067 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tube Light Navbar - Demo</title>
-    <!-- Tailwind CSS for layout utilities -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="resource/css/style.css" />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Phosphor Icons CDN -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <!-- Lucide Icons CDN (Optional: Remove if no longer needed) -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
-  <body class="min-h-screen">
-    <!-- Fixed Navbar Wrapper -->
-    <div
-      class="fixed bottom-0 md:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 md:mb-0 md:pt-6 h-fit"
-    >
-      <div
-        class="nav-container flex items-center gap-3 py-1 px-1 rounded-full shadow-lg relative"
-      >
-        <!-- Sliding Lamp Highlighter -->
-        <div id="lamp-highlighter">
-          <div class="lamp-top">
-            <div class="lamp-glow-1"></div>
-            <div class="lamp-glow-2"></div>
-            <div class="lamp-glow-3"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tube Light Navbar - Demo</title>
+  <!-- Tailwind CSS for layout utilities -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="resource/css/style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons CDN -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Lucide Icons CDN (Optional: Remove if no longer needed) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen">
+  <!-- Fixed Navbar Wrapper -->
+  <div class="fixed bottom-0 md:top-0 left-1/2 -translate-x-1/2 z-50 mb-6 md:mb-0 md:pt-6 h-fit">
+    <div class="nav-container flex items-center gap-3 py-1 px-1 rounded-full shadow-lg relative">
+      <!-- Sliding Lamp Highlighter -->
+      <div id="lamp-highlighter">
+        <div class="lamp-top">
+          <div class="lamp-glow-1"></div>
+          <div class="lamp-glow-2"></div>
+          <div class="lamp-glow-3"></div>
+        </div>
+      </div>
+
+      <!-- Nav Items -->
+      <a href="#home" class="nav-item active" data-name="Home">
+        <i class="ph ph-house icon w-[18px] h-[18px]"></i>
+        <span class="hidden md:inline">Home</span>
+      </a>
+      <a href="#demos" class="nav-item" data-name="Demos">
+        <i class="ph ph-briefcase icon w-[18px] h-[18px]"></i>
+        <span class="hidden md:inline">Demos</span>
+      </a>
+      <a href="#features" class="nav-item" data-name="Features">
+        <i class="ph ph-sparkle icon w-[18px] h-[18px]"></i>
+        <span class="hidden md:inline">Features</span>
+      </a>
+      <a href="#sections" class="nav-item" data-name="Sections">
+        <i class="ph ph-layout icon w-[18px] h-[18px]"></i>
+        <span class="hidden md:inline">Sections</span>
+      </a>
+      <a href="#testimonials" class="nav-item" data-name="Testimonials">
+        <i class="ph ph-chat-circle icon w-[18px] h-[18px]"></i>
+        <span class="hidden md:inline">Testimonials</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Only Navigation Bar remains -->
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section-new">
+    <div class="hero-container-new">
+      <!-- Main Content Wrapper -->
+      <div class="hero-main-wrapper">
+        <!-- Left Feature Cards -->
+        <div class="hero-feature-cards hero-reveal delay-100">
+          <!-- Card 1: Made by an Envato Elite -->
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-label">Made by an<br />Envato Elite</span>
+            </div>
+            <div class="feature-card-icon">
+              <i class="ph ph-seal-check text-4xl text-orange-500"></i>
+            </div>
+          </div>
+
+          <!-- Card 2: Next-generation front-end build tool -->
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <span class="feature-card-label">Next-generation<br />front-end build tool</span>
+            </div>
+            <div class="feature-card-icon">
+              <svg class="w-10 h-10" viewBox="0 0 410 404" fill="none">
+                <path
+                  d="M399.641 59.5246L215.643 388.545C211.844 395.338 202.084 395.378 198.228 388.618L10.5817 59.5563C6.38087 52.1896 12.6802 43.2665 21.0281 44.7586L205.223 77.6824C206.398 77.8924 207.601 77.8904 208.776 77.6763L389.119 44.8058C397.439 43.2894 403.768 52.1434 399.641 59.5246Z"
+                  fill="url(#paint0_linear)" />
+                <path
+                  d="M292.965 1.5744L156.801 28.2552C154.563 28.6937 152.906 30.5903 152.771 32.8664L144.395 174.33C144.198 177.662 147.258 180.248 150.51 179.498L188.42 170.749C191.967 169.931 195.172 173.055 194.443 176.622L183.18 231.775C182.422 235.487 185.907 238.661 189.532 237.56L212.947 230.446C216.577 229.344 220.065 232.527 219.297 236.242L201.398 322.875C200.278 328.294 207.486 331.249 210.492 326.603L212.5 323.5L323.454 102.072C325.312 98.3645 322.108 94.137 318.036 94.9228L279.014 102.454C275.347 103.161 272.227 99.746 273.262 96.1583L298.731 7.86689C299.767 4.27314 296.636 0.855181 292.965 1.5744Z"
+                  fill="url(#paint1_linear)" />
+                <defs>
+                  <linearGradient id="paint0_linear" x1="6.00017" y1="32.9999" x2="235" y2="344"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#41D1FF" />
+                    <stop offset="1" stop-color="#BD34FE" />
+                  </linearGradient>
+                  <linearGradient id="paint1_linear" x1="194.651" y1="8.81818" x2="236.076" y2="292.989"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFEA83" />
+                    <stop offset="0.0833333" stop-color="#FFDD35" />
+                    <stop offset="1" stop-color="#FFA800" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 3: Tailwind CSS -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg class="w-10 h-10" viewBox="0 0 54 33" fill="none">
+                <g clip-path="url(#clip0)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
+                    fill="#38bdf8" />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <path fill="#fff" d="M0 0h54v32.4H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="feature-card-header">
+              <span class="feature-card-label">A utility-first CSS<br />framework</span>
+            </div>
           </div>
         </div>
 
-        <!-- Nav Items -->
-        <a href="#home" class="nav-item active" data-name="Home">
-          <i class="ph ph-house icon w-[18px] h-[18px]"></i>
-          <span class="hidden md:inline">Home</span>
-        </a>
-        <a href="#demos" class="nav-item" data-name="Demos">
-          <i class="ph ph-briefcase icon w-[18px] h-[18px]"></i>
-          <span class="hidden md:inline">Demos</span>
-        </a>
-        <a href="#features" class="nav-item" data-name="Features">
-          <i class="ph ph-sparkle icon w-[18px] h-[18px]"></i>
-          <span class="hidden md:inline">Features</span>
-        </a>
-        <a href="#sections" class="nav-item" data-name="Sections">
-          <i class="ph ph-layout icon w-[18px] h-[18px]"></i>
-          <span class="hidden md:inline">Sections</span>
-        </a>
-        <a href="#testimonials" class="nav-item" data-name="Testimonials">
-          <i class="ph ph-chat-circle icon w-[18px] h-[18px]"></i>
-          <span class="hidden md:inline">Testimonials</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Only Navigation Bar remains -->
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section-new">
-      <div class="hero-container-new">
-        <!-- Main Content Wrapper -->
-        <div class="hero-main-wrapper">
-          <!-- Left Feature Cards -->
-          <div class="hero-feature-cards hero-reveal delay-100">
-            <!-- Card 1: Made by an Envato Elite -->
-            <div class="feature-card">
-              <div class="feature-card-header">
-                <span class="feature-card-label"
-                  >Made by an<br />Envato Elite</span
-                >
-              </div>
-              <div class="feature-card-icon">
-                <i class="ph ph-seal-check text-4xl text-orange-500"></i>
-              </div>
-            </div>
-
-            <!-- Card 2: Next-generation front-end build tool -->
-            <div class="feature-card">
-              <div class="feature-card-header">
-                <span class="feature-card-label"
-                  >Next-generation<br />front-end build tool</span
-                >
-              </div>
-              <div class="feature-card-icon">
-                <svg class="w-10 h-10" viewBox="0 0 410 404" fill="none">
-                  <path
-                    d="M399.641 59.5246L215.643 388.545C211.844 395.338 202.084 395.378 198.228 388.618L10.5817 59.5563C6.38087 52.1896 12.6802 43.2665 21.0281 44.7586L205.223 77.6824C206.398 77.8924 207.601 77.8904 208.776 77.6763L389.119 44.8058C397.439 43.2894 403.768 52.1434 399.641 59.5246Z"
-                    fill="url(#paint0_linear)"
-                  />
-                  <path
-                    d="M292.965 1.5744L156.801 28.2552C154.563 28.6937 152.906 30.5903 152.771 32.8664L144.395 174.33C144.198 177.662 147.258 180.248 150.51 179.498L188.42 170.749C191.967 169.931 195.172 173.055 194.443 176.622L183.18 231.775C182.422 235.487 185.907 238.661 189.532 237.56L212.947 230.446C216.577 229.344 220.065 232.527 219.297 236.242L201.398 322.875C200.278 328.294 207.486 331.249 210.492 326.603L212.5 323.5L323.454 102.072C325.312 98.3645 322.108 94.137 318.036 94.9228L279.014 102.454C275.347 103.161 272.227 99.746 273.262 96.1583L298.731 7.86689C299.767 4.27314 296.636 0.855181 292.965 1.5744Z"
-                    fill="url(#paint1_linear)"
-                  />
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear"
-                      x1="6.00017"
-                      y1="32.9999"
-                      x2="235"
-                      y2="344"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#41D1FF" />
-                      <stop offset="1" stop-color="#BD34FE" />
-                    </linearGradient>
-                    <linearGradient
-                      id="paint1_linear"
-                      x1="194.651"
-                      y1="8.81818"
-                      x2="236.076"
-                      y2="292.989"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-color="#FFEA83" />
-                      <stop offset="0.0833333" stop-color="#FFDD35" />
-                      <stop offset="1" stop-color="#FFA800" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-            </div>
-
-            <!-- Card 3: Tailwind CSS -->
-            <div class="feature-card">
-              <div class="feature-card-icon">
-                <svg class="w-10 h-10" viewBox="0 0 54 33" fill="none">
-                  <g clip-path="url(#clip0)">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
-                      fill="#38bdf8"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0">
-                      <path fill="#fff" d="M0 0h54v32.4H0z" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-              <div class="feature-card-header">
-                <span class="feature-card-label"
-                  >A utility-first CSS<br />framework</span
-                >
-              </div>
-            </div>
+        <!-- Center Content -->
+        <div class="hero-center-content">
+          <!-- Top Badge -->
+          <div class="hero-badge hero-reveal">
+            Currently available at a special price
           </div>
 
-          <!-- Center Content -->
-          <div class="hero-center-content">
-            <!-- Top Badge -->
-            <div class="hero-badge hero-reveal">
-              Currently available at a special price
-            </div>
+          <h1 class="hero-title-new hero-reveal delay-200">
+            Nexsas - <span class="text-gradient">A Multi-purpose</span><br />
+            Software, SaaS & Startup<br />
+            Tailwind Template
+          </h1>
 
-            <h1 class="hero-title-new hero-reveal delay-200">
-              Nexsas - <span class="text-gradient">A Multi-purpose</span><br />
-              Software, SaaS & Startup<br />
-              Tailwind Template
-            </h1>
-
-            <div class="hero-actions-new hero-reveal delay-300">
-              <button class="btn-primary-new">
-                Purchase
-                <i class="ph ph-arrow-right text-sm ml-2"></i>
-              </button>
-              <button
-                class="btn-secondary-new"
-                onclick="
+          <div class="hero-actions-new hero-reveal delay-300">
+            <button class="btn-primary-new">
+              Purchase
+              <i class="ph ph-arrow-right text-sm ml-2"></i>
+            </button>
+            <button class="btn-secondary-new" onclick="
                   document
                     .getElementById('demos')
                     .scrollIntoView({ behavior: 'smooth' })
-                "
-              >
-                Browse Demos
-                <i class="ph ph-arrow-right text-sm ml-2"></i>
-              </button>
-            </div>
+                ">
+              Browse Demos
+              <i class="ph ph-arrow-right text-sm ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Stats Cards -->
+        <div class="hero-stats-cards hero-reveal delay-100">
+          <!-- Stat 1: Prebuilt Websites -->
+          <div class="stat-card">
+            <div class="stat-card-label">Prebuilt<br />Websites</div>
+            <div class="stat-card-value">40+</div>
           </div>
 
-          <!-- Right Stats Cards -->
-          <div class="hero-stats-cards hero-reveal delay-100">
-            <!-- Stat 1: Prebuilt Websites -->
-            <div class="stat-card">
-              <div class="stat-card-label">Prebuilt<br />Websites</div>
-              <div class="stat-card-value">40+</div>
-            </div>
+          <!-- Stat 2: Total Sections -->
+          <div class="stat-card">
+            <div class="stat-card-label">Total Sections</div>
+            <div class="stat-card-value">6500+</div>
+          </div>
 
-            <!-- Stat 2: Total Sections -->
-            <div class="stat-card">
-              <div class="stat-card-label">Total Sections</div>
-              <div class="stat-card-value">6500+</div>
-            </div>
+          <!-- Stat 3: Total Pages -->
+          <div class="stat-card">
+            <div class="stat-card-label">Total Pages</div>
+            <div class="stat-card-value">1900+</div>
+          </div>
 
-            <!-- Stat 3: Total Pages -->
-            <div class="stat-card">
-              <div class="stat-card-label">Total Pages</div>
-              <div class="stat-card-value">1900+</div>
-            </div>
-
-            <!-- Stat 4: Mega Menu -->
-            <div class="stat-card">
-              <div class="stat-card-label">Mega Menu</div>
-              <div class="stat-card-value">10+</div>
-            </div>
+          <!-- Stat 4: Mega Menu -->
+          <div class="stat-card">
+            <div class="stat-card-label">Mega Menu</div>
+            <div class="stat-card-value">10+</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Gallery Carousel Section -->
-    <section class="carousel-section hero-reveal">
-      <div class="carousel-viewport">
-        <div class="relative marquee-visible">
-          <div
-            id="carousel-container"
-            class="rfm-marquee-container z-0 marquee-container"
-          >
-            <!-- Carousel will be populated by JavaScript -->
-          </div>
-          <div class="marquee-gradient-overlay"></div>
+  <!-- Gallery Carousel Section -->
+  <section class="carousel-section hero-reveal">
+    <div class="carousel-viewport">
+      <div class="relative marquee-visible">
+        <div id="carousel-container" class="rfm-marquee-container z-0 marquee-container">
+          <!-- Carousel will be populated by JavaScript -->
         </div>
+        <div class="marquee-gradient-overlay"></div>
       </div>
-    </section>
-    <!-- Portfolio Section -->
-    <section id="demos" class="portfolio-intro hero-reveal">
-      <div class="portfolio-container">
-        <div class="portfolio-heading">
-          <h2 class="highlight-text">40+</h2>
-          <h4 class="sub-heading">Prebuilt Websites</h4>
-        </div>
-
-        <!-- Portfolio Grid Container -->
-        <div
-          id="portfolio-grid"
-          class="mt-16 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-4 justify-items-center"
-        >
-          <!-- Cards will be injected here via JS -->
-        </div>
+    </div>
+  </section>
+  <!-- Portfolio Section -->
+  <section id="demos" class="portfolio-intro hero-reveal">
+    <div class="portfolio-container">
+      <div class="portfolio-heading">
+        <h2 class="highlight-text">40+</h2>
+        <h4 class="sub-heading">Prebuilt Websites</h4>
       </div>
-    </section>
 
-    <!-- Feature Section -->
-    <section id="features" class="py-12">
-      <div class="w-full max-w-7xl mx-auto px-4">
-        <!-- Section Header -->
-        <div class="text-center mb-16 max-w-3xl mx-auto">
-          <span
-            class="inline-block py-2 px-6 rounded-full bg-white border border-gray-200 text-gray-900 font-medium text-sm mb-6 shadow-sm"
-          >
-            Exclusive Features
-          </span>
-          <h2
-            class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight leading-tight"
-          >
-            Unlock premium & exclusive features at no cost.
-          </h2>
-          <p class="text-lg text-gray-500 leading-relaxed">
-            Enhance your website's flexibility and durability with these
-            powerful features, giving you access to premium-quality tools at
-            absolutely no cost.
-          </p>
-        </div>
-
-        <!-- Feature Grid -->
-        <ul class="feature-grid">
-          <!-- Card 1 -->
-          <li class="grid-item">
-            <div class="glowing-card-border">
-              <div class="glowing-effect active">
-                <div class="glow-line"></div>
-              </div>
-              <div class="glowing-card-content">
-                <div class="flex flex-1 flex-col justify-between gap-3">
-                  <div
-                    class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2"
-                  >
-                    <i class="ph ph-cube text-xl text-gray-700"></i>
-                  </div>
-                  <div class="space-y-3">
-                    <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
-                      Do things the right way
-                    </h3>
-                    <h2 class="text-sm text-gray-500 md:text-base">
-                      Running out of copy so I'll write anything.
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Card 2 -->
-          <li class="grid-item">
-            <div class="glowing-card-border">
-              <div class="glowing-effect active">
-                <div class="glow-line"></div>
-              </div>
-              <div class="glowing-card-content">
-                <div class="flex flex-1 flex-col justify-between gap-3">
-                  <div
-                    class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2"
-                  >
-                    <i class="ph ph-gear text-xl text-gray-700"></i>
-                  </div>
-                  <div class="space-y-3">
-                    <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
-                      The best AI code editor.
-                    </h3>
-                    <h2 class="text-sm text-gray-500 md:text-base">
-                      Yes, it's true. I'm not even kidding.
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Card 3 -->
-          <li class="grid-item">
-            <div class="glowing-card-border">
-              <div class="glowing-effect active">
-                <div class="glow-line"></div>
-              </div>
-              <div class="glowing-card-content">
-                <div class="flex flex-1 flex-col justify-between gap-3">
-                  <div
-                    class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2"
-                  >
-                    <i class="ph ph-lock text-xl text-gray-700"></i>
-                  </div>
-                  <div class="space-y-3">
-                    <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
-                      Secure & Fast
-                    </h3>
-                    <h2 class="text-sm text-gray-500 md:text-base">
-                      It's the best money you'll ever spend
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Card 4 -->
-          <li class="grid-item">
-            <div class="glowing-card-border">
-              <div class="glowing-effect active">
-                <div class="glow-line"></div>
-              </div>
-              <div class="glowing-card-content">
-                <div class="flex flex-1 flex-col justify-between gap-3">
-                  <div
-                    class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2"
-                  >
-                    <i class="ph ph-sparkle text-xl text-gray-700"></i>
-                  </div>
-                  <div class="space-y-3">
-                    <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
-                      Built with precision
-                    </h3>
-                    <h2 class="text-sm text-gray-500 md:text-base">
-                      I'm not even kidding. Ask my mom.
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Card 5 -->
-          <li class="grid-item">
-            <div class="glowing-card-border">
-              <div class="glowing-effect active">
-                <div class="glow-line"></div>
-              </div>
-              <div class="glowing-card-content">
-                <div class="flex flex-1 flex-col justify-between gap-3">
-                  <div
-                    class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2"
-                  >
-                    <i class="ph ph-magnifying-glass text-xl text-gray-700"></i>
-                  </div>
-                  <div class="space-y-3">
-                    <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
-                      Coming soon on UI
-                    </h3>
-                    <h2 class="text-sm text-gray-500 md:text-base">
-                      I'm writing the code as I record this.
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <!-- Card 6 -->
-          <li class="grid-item">
-            <div class="glowing-card-border">
-              <div class="glowing-effect active">
-                <div class="glow-line"></div>
-              </div>
-              <div class="glowing-card-content">
-                <div class="flex flex-1 flex-col justify-between gap-3">
-                  <div
-                    class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2"
-                  >
-                    <i class="ph ph-rocket text-xl text-gray-700"></i>
-                  </div>
-                  <div class="space-y-3">
-                    <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
-                      Ready to Launch
-                    </h3>
-                    <h2 class="text-sm text-gray-500 md:text-base">
-                      Everything you need to ship your next project.
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
+      <!-- Portfolio Grid Container -->
+      <div id="portfolio-grid"
+        class="mt-16 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-4 justify-items-center">
+        <!-- Cards will be injected here via JS -->
       </div>
-    </section>
-    <!-- seo optimization -->
-    <section id="seo" class="py-40">
-      <div class="w-full max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- Left Column: Content -->
-          <div class="space-y-8">
-            <div>
-              <h2
-                class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight leading-tight"
-              >
-                Boost Sales with SEO Optimized Solutions
-              </h2>
-              <p class="text-lg text-gray-500 leading-relaxed">
-                Showcase your products online and skyrocket sales with Nexas.
-                Start your eCommerce journey with cutting-edge modern designs.
-              </p>
+    </div>
+  </section>
+
+  <!-- Feature Section -->
+  <section id="features" class="py-12">
+    <div class="w-full max-w-7xl mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-16 max-w-3xl mx-auto">
+        <span
+          class="inline-block py-2 px-6 rounded-full bg-white border border-gray-200 text-gray-900 font-medium text-sm mb-6 shadow-sm">
+          Exclusive Features
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+          Unlock premium & exclusive features at no cost.
+        </h2>
+        <p class="text-lg text-gray-500 leading-relaxed">
+          Enhance your website's flexibility and durability with these
+          powerful features, giving you access to premium-quality tools at
+          absolutely no cost.
+        </p>
+      </div>
+
+      <!-- Feature Grid -->
+      <ul class="feature-grid">
+        <!-- Card 1 -->
+        <li class="grid-item">
+          <div class="glowing-card-border">
+            <div class="glowing-effect active">
+              <div class="glow-line"></div>
             </div>
-
-            <!-- Features List -->
-            <ul class="space-y-4">
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-code text-lg text-gray-700"></i>
+            <div class="glowing-card-content">
+              <div class="flex flex-1 flex-col justify-between gap-3">
+                <div class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2">
+                  <i class="ph ph-cube text-xl text-gray-700"></i>
                 </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Semantic HTML5 Structure</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-lightning text-lg text-gray-700"></i>
-                </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Fast Loading Speed</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-lock text-lg text-gray-700"></i>
-                </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Schema Markup Integration</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-devices text-lg text-gray-700"></i>
-                </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Mobile & Desktop Optimized</span
-                >
-              </li>
-            </ul>
-
-            <!-- CTA Button -->
-            <div>
-              <button
-                class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Purchase Now
-                <i class="ph ph-arrow-right text-sm"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- Right Column: Performance Metrics -->
-          <div class="relative lg:absolute lg:right-0 lg:w-1/2 lg:pl-12">
-            <div
-              class="bg-gradient-to-br from-gray-900 via-gray-800 to-lime-500 rounded-3xl lg:rounded-r-none p-16 lg:p-20 shadow-2xl"
-            >
-              <div class="grid grid-cols-2 gap-12">
-                <!-- Metric 1: SEO Design -->
-                <div class="flex flex-col items-center">
-                  <div class="relative w-40 h-40 lg:w-48 lg:h-48">
-                    <svg class="transform -rotate-90 w-full h-full">
-                      <circle
-                        cx="50%"
-                        cy="50%"
-                        r="45%"
-                        stroke="#374151"
-                        stroke-width="10"
-                        fill="none"
-                      />
-                      <circle
-                        cx="50%"
-                        cy="50%"
-                        r="45%"
-                        stroke="#a3e635"
-                        stroke-width="10"
-                        fill="none"
-                        stroke-dasharray="351.86"
-                        stroke-dashoffset="35.186"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                    <div
-                      class="absolute inset-0 flex flex-col items-center justify-center"
-                    >
-                      <span class="text-4xl lg:text-5xl font-bold text-white"
-                        >96</span
-                      >
-                      <span
-                        class="text-xs lg:text-sm text-gray-300 uppercase tracking-wide mt-1"
-                        >SEO Design</span
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Metric 2: Accessibility -->
-                <div class="flex flex-col items-center">
-                  <div class="relative w-40 h-40 lg:w-48 lg:h-48">
-                    <svg class="transform -rotate-90 w-full h-full">
-                      <circle
-                        cx="50%"
-                        cy="50%"
-                        r="45%"
-                        stroke="#374151"
-                        stroke-width="10"
-                        fill="none"
-                      />
-                      <circle
-                        cx="50%"
-                        cy="50%"
-                        r="45%"
-                        stroke="#a3e635"
-                        stroke-width="10"
-                        fill="none"
-                        stroke-dasharray="351.86"
-                        stroke-dashoffset="35.186"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                    <div
-                      class="absolute inset-0 flex flex-col items-center justify-center"
-                    >
-                      <span class="text-4xl lg:text-5xl font-bold text-white"
-                        >96</span
-                      >
-                      <span
-                        class="text-xs lg:text-sm text-gray-300 uppercase tracking-wide mt-1"
-                        >Accessibility</span
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Metric 3: Best Practices -->
-                <div class="flex flex-col items-center">
-                  <div class="relative w-40 h-40 lg:w-48 lg:h-48">
-                    <svg class="transform -rotate-90 w-full h-full">
-                      <circle
-                        cx="50%"
-                        cy="50%"
-                        r="45%"
-                        stroke="#374151"
-                        stroke-width="10"
-                        fill="none"
-                      />
-                      <circle
-                        cx="50%"
-                        cy="50%"
-                        r="45%"
-                        stroke="#a3e635"
-                        stroke-width="10"
-                        fill="none"
-                        stroke-dasharray="351.86"
-                        stroke-dashoffset="28.149"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                    <div
-                      class="absolute inset-0 flex flex-col items-center justify-center"
-                    >
-                      <span class="text-4xl lg:text-5xl font-bold text-white"
-                        >97</span
-                      >
-                      <span
-                        class="text-xs lg:text-sm text-gray-300 uppercase tracking-wide mt-1"
-                        >Best Practices</span
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Metric 4: Performance -->
-                <div class="flex flex-col items-center">
-                  <div class="relative w-40 h-40 lg:w-48 lg:h-48">
-                    <svg class="transform -rotate-90 w-full h-full">
-                      <circle
-                        cx="50%"
-                        cy="50%"
-                        r="45%"
-                        stroke="#374151"
-                        stroke-width="10"
-                        fill="none"
-                      />
-                      <circle
-                        cx="50%"
-                        cy="50%"
-                        r="45%"
-                        stroke="#a3e635"
-                        stroke-width="10"
-                        fill="none"
-                        stroke-dasharray="351.86"
-                        stroke-dashoffset="63.335"
-                        stroke-linecap="round"
-                      />
-                    </svg>
-                    <div
-                      class="absolute inset-0 flex flex-col items-center justify-center"
-                    >
-                      <span class="text-4xl lg:text-5xl font-bold text-white"
-                        >92</span
-                      >
-                      <span
-                        class="text-xs lg:text-sm text-gray-300 uppercase tracking-wide mt-1"
-                        >Performance</span
-                      >
-                    </div>
-                  </div>
+                <div class="space-y-3">
+                  <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
+                    Do things the right way
+                  </h3>
+                  <h2 class="text-sm text-gray-500 md:text-base">
+                    Running out of copy so I'll write anything.
+                  </h2>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </li>
 
-    <!-- mega menu showcase -->
-    <section id="mega-menu" class="py-16">
-      <div class="w-full max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- Left Column: Mega Menu Showcase -->
-          <div class="relative lg:absolute lg:left-0 lg:w-1/2 lg:pr-12">
-            <div
-              id="mega-menu-images-container"
-              class="bg-white rounded-3xl lg:rounded-l-none p-8 lg:p-12 shadow-2xl grid grid-cols-12 gap-4 lg:gap-6"
-            >
-              <!-- Mega Menu Showcase Images -->
-              <!-- Images will be injected here via JavaScript -->
+        <!-- Card 2 -->
+        <li class="grid-item">
+          <div class="glowing-card-border">
+            <div class="glowing-effect active">
+              <div class="glow-line"></div>
+            </div>
+            <div class="glowing-card-content">
+              <div class="flex flex-1 flex-col justify-between gap-3">
+                <div class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2">
+                  <i class="ph ph-gear text-xl text-gray-700"></i>
+                </div>
+                <div class="space-y-3">
+                  <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
+                    The best AI code editor.
+                  </h3>
+                  <h2 class="text-sm text-gray-500 md:text-base">
+                    Yes, it's true. I'm not even kidding.
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
+        </li>
 
-          <!-- Spacer for left column on desktop -->
-          <div class="hidden lg:block"></div>
-
-          <!-- Right Column: Content -->
-          <div class="space-y-8">
-            <div>
-              <h2
-                class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight leading-tight"
-              >
-                Next-Level Mega Menus for Ultimate UX
-              </h2>
-              <p class="text-lg text-gray-500 leading-relaxed">
-                Create seamless, visually stunning navigation menus that engage
-                users and enhance their browsing experience on any device.
-              </p>
+        <!-- Card 3 -->
+        <li class="grid-item">
+          <div class="glowing-card-border">
+            <div class="glowing-effect active">
+              <div class="glow-line"></div>
             </div>
-
-            <!-- Features List -->
-            <ul class="space-y-4">
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-list text-lg text-gray-700"></i>
+            <div class="glowing-card-content">
+              <div class="flex flex-1 flex-col justify-between gap-3">
+                <div class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2">
+                  <i class="ph ph-lock text-xl text-gray-700"></i>
                 </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Mega Dropdown Support</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-palette text-lg text-gray-700"></i>
+                <div class="space-y-3">
+                  <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
+                    Secure & Fast
+                  </h3>
+                  <h2 class="text-sm text-gray-500 md:text-base">
+                    It's the best money you'll ever spend
+                  </h2>
                 </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Animated Styles</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-device-mobile text-lg text-gray-700"></i>
-                </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Mobile-Friendly Navigation</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-gauge text-lg text-gray-700"></i>
-                </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Fast Loading Performance</span
-                >
-              </li>
-            </ul>
-
-            <!-- CTA Button -->
-            <div>
-              <button
-                class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Purchase Now
-                <i class="ph ph-arrow-right text-sm"></i>
-              </button>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </li>
 
-    <!-- ready-made pages showcase -->
-    <section id="pages" class="py-16">
-      <div class="w-full max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- Left Column: Content -->
-          <div class="space-y-8">
-            <div>
-              <h2
-                class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight leading-tight"
-              >
-                Explore 1900+ Stunning Ready-Made Pages
-              </h2>
-              <p class="text-lg text-gray-500 leading-relaxed">
-                Over 1900+ stunning ready-made, clean, and modular pages that
-                simplify content management and ensure full responsiveness on
-                all devices.
-              </p>
+        <!-- Card 4 -->
+        <li class="grid-item">
+          <div class="glowing-card-border">
+            <div class="glowing-effect active">
+              <div class="glow-line"></div>
             </div>
-
-            <!-- Features List -->
-            <ul class="space-y-4">
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-files text-lg text-gray-700"></i>
+            <div class="glowing-card-content">
+              <div class="flex flex-1 flex-col justify-between gap-3">
+                <div class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2">
+                  <i class="ph ph-sparkle text-xl text-gray-700"></i>
                 </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Diverse Page Templates</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-squares-four text-lg text-gray-700"></i>
+                <div class="space-y-3">
+                  <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
+                    Built with precision
+                  </h3>
+                  <h2 class="text-sm text-gray-500 md:text-base">
+                    I'm not even kidding. Ask my mom.
+                  </h2>
                 </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Clean, Modular Design</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-pencil-simple text-lg text-gray-700"></i>
-                </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Easy Content Management</span
-                >
-              </li>
-              <li class="flex items-center gap-3">
-                <div
-                  class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0"
-                >
-                  <i class="ph ph-monitor text-lg text-gray-700"></i>
-                </div>
-                <span class="text-base font-medium text-gray-900"
-                  >Fully Responsive Layouts</span
-                >
-              </li>
-            </ul>
-
-            <!-- CTA Button -->
-            <div>
-              <button
-                class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Purchase Now
-                <i class="ph ph-arrow-right text-sm"></i>
-              </button>
+              </div>
             </div>
           </div>
+        </li>
 
-          <!-- Right Column: Page Templates Showcase -->
-          <div class="relative lg:absolute lg:right-0 lg:w-1/2 lg:pl-12">
-            <div
-              id="pages-showcase-container"
-              class="bg-white rounded-3xl lg:rounded-r-none p-8 lg:p-12 shadow-2xl grid grid-cols-2 gap-4 lg:gap-6"
-            >
-              <!-- Pages showcase images will be injected here via JavaScript -->
+        <!-- Card 5 -->
+        <li class="grid-item">
+          <div class="glowing-card-border">
+            <div class="glowing-effect active">
+              <div class="glow-line"></div>
+            </div>
+            <div class="glowing-card-content">
+              <div class="flex flex-1 flex-col justify-between gap-3">
+                <div class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2">
+                  <i class="ph ph-magnifying-glass text-xl text-gray-700"></i>
+                </div>
+                <div class="space-y-3">
+                  <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
+                    Coming soon on UI
+                  </h3>
+                  <h2 class="text-sm text-gray-500 md:text-base">
+                    I'm writing the code as I record this.
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </li>
 
-    <!-- prebuilt sections showcase -->
-    <section id="sections" class="relative py-24">
-      <!-- Prebuilt Sections Container (overlaps the dark background) -->
-      <div class="w-full max-w-7xl mx-auto px-4 relative z-10 pb-12">
-        <!-- Main Container with Gradient Background -->
-        <div
-          class="relative bg-gradient-to-br from-purple-200 via-purple-100 to-blue-100 rounded-3xl p-12 lg:p-16 overflow-hidden"
-        >
-          <!-- Header Content -->
-          <div class="relative z-10 max-w-2xl mb-12">
-            <div
-              class="inline-block px-4 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-purple-600 mb-4"
-            >
-              Prebuilt Blocks
+        <!-- Card 6 -->
+        <li class="grid-item">
+          <div class="glowing-card-border">
+            <div class="glowing-effect active">
+              <div class="glow-line"></div>
             </div>
-            <h2
-              class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight leading-tight"
-            >
-              Build Stunning Pages with Prebuilt Sections
+            <div class="glowing-card-content">
+              <div class="flex flex-1 flex-col justify-between gap-3">
+                <div class="w-fit rounded-lg border-2 border-gray-100 bg-gray-50 p-2">
+                  <i class="ph ph-rocket text-xl text-gray-700"></i>
+                </div>
+                <div class="space-y-3">
+                  <h3 class="text-xl font-semibold text-gray-900 md:text-2xl">
+                    Ready to Launch
+                  </h3>
+                  <h2 class="text-sm text-gray-500 md:text-base">
+                    Everything you need to ship your next project.
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- seo optimization -->
+  <section id="seo" class="py-40">
+    <div class="w-full max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Column: Content -->
+        <div class="space-y-8">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight leading-tight">
+              Boost Sales with SEO Optimized Solutions
             </h2>
-            <p class="text-lg text-gray-600 leading-relaxed mb-6">
-              Instantly create over 1500+ prebuilt sections you can use with one
-              single click. Drag & drop, customize your workflow, save time, and
-              accelerate your development process.
+            <p class="text-lg text-gray-500 leading-relaxed">
+              Showcase your products online and skyrocket sales with Nexas.
+              Start your eCommerce journey with cutting-edge modern designs.
             </p>
+          </div>
+
+          <!-- Features List -->
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-code text-lg text-gray-700"></i>
+              </div>
+              <span class="text-base font-medium text-gray-900">Semantic HTML5 Structure</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-lightning text-lg text-gray-700"></i>
+              </div>
+              <span class="text-base font-medium text-gray-900">Fast Loading Speed</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-lock text-lg text-gray-700"></i>
+              </div>
+              <span class="text-base font-medium text-gray-900">Schema Markup Integration</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-devices text-lg text-gray-700"></i>
+              </div>
+              <span class="text-base font-medium text-gray-900">Mobile & Desktop Optimized</span>
+            </li>
+          </ul>
+
+          <!-- CTA Button -->
+          <div>
             <button
-              class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
+              class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl">
               Purchase Now
               <i class="ph ph-arrow-right text-sm"></i>
             </button>
           </div>
+        </div>
 
-          <!-- Sections Grid - Masonry Style -->
+        <!-- Right Column: Performance Metrics -->
+        <div class="relative lg:absolute lg:right-0 lg:w-1/2 lg:pl-12">
           <div
-            class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-start"
-          >
-            <!-- LEFT COLUMN -->
-            <div id="sections-left-column" class="space-y-6">
-              <!-- 3 Images will be injected here via JavaScript -->
-            </div>
+            class="bg-gradient-to-br from-gray-900 via-gray-800 to-lime-500 rounded-3xl lg:rounded-r-none p-16 lg:p-20 shadow-2xl">
+            <div class="grid grid-cols-2 gap-12">
+              <!-- Metric 1: SEO Design -->
+              <div class="flex flex-col items-center">
+                <div class="relative w-40 h-40 lg:w-48 lg:h-48">
+                  <svg class="transform -rotate-90 w-full h-full">
+                    <circle cx="50%" cy="50%" r="45%" stroke="#374151" stroke-width="10" fill="none" />
+                    <circle cx="50%" cy="50%" r="45%" stroke="#a3e635" stroke-width="10" fill="none"
+                      stroke-dasharray="351.86" stroke-dashoffset="35.186" stroke-linecap="round" />
+                  </svg>
+                  <div class="absolute inset-0 flex flex-col items-center justify-center">
+                    <span class="text-4xl lg:text-5xl font-bold text-white">96</span>
+                    <span class="text-xs lg:text-sm text-gray-300 uppercase tracking-wide mt-1">SEO Design</span>
+                  </div>
+                </div>
+              </div>
 
-            <!-- RIGHT COLUMN -->
-            <div id="sections-right-column" class="space-y-6">
-              <!-- 3 Images will be injected here via JavaScript -->
+              <!-- Metric 2: Accessibility -->
+              <div class="flex flex-col items-center">
+                <div class="relative w-40 h-40 lg:w-48 lg:h-48">
+                  <svg class="transform -rotate-90 w-full h-full">
+                    <circle cx="50%" cy="50%" r="45%" stroke="#374151" stroke-width="10" fill="none" />
+                    <circle cx="50%" cy="50%" r="45%" stroke="#a3e635" stroke-width="10" fill="none"
+                      stroke-dasharray="351.86" stroke-dashoffset="35.186" stroke-linecap="round" />
+                  </svg>
+                  <div class="absolute inset-0 flex flex-col items-center justify-center">
+                    <span class="text-4xl lg:text-5xl font-bold text-white">96</span>
+                    <span class="text-xs lg:text-sm text-gray-300 uppercase tracking-wide mt-1">Accessibility</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Metric 3: Best Practices -->
+              <div class="flex flex-col items-center">
+                <div class="relative w-40 h-40 lg:w-48 lg:h-48">
+                  <svg class="transform -rotate-90 w-full h-full">
+                    <circle cx="50%" cy="50%" r="45%" stroke="#374151" stroke-width="10" fill="none" />
+                    <circle cx="50%" cy="50%" r="45%" stroke="#a3e635" stroke-width="10" fill="none"
+                      stroke-dasharray="351.86" stroke-dashoffset="28.149" stroke-linecap="round" />
+                  </svg>
+                  <div class="absolute inset-0 flex flex-col items-center justify-center">
+                    <span class="text-4xl lg:text-5xl font-bold text-white">97</span>
+                    <span class="text-xs lg:text-sm text-gray-300 uppercase tracking-wide mt-1">Best Practices</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Metric 4: Performance -->
+              <div class="flex flex-col items-center">
+                <div class="relative w-40 h-40 lg:w-48 lg:h-48">
+                  <svg class="transform -rotate-90 w-full h-full">
+                    <circle cx="50%" cy="50%" r="45%" stroke="#374151" stroke-width="10" fill="none" />
+                    <circle cx="50%" cy="50%" r="45%" stroke="#a3e635" stroke-width="10" fill="none"
+                      stroke-dasharray="351.86" stroke-dashoffset="63.335" stroke-linecap="round" />
+                  </svg>
+                  <div class="absolute inset-0 flex flex-col items-center justify-center">
+                    <span class="text-4xl lg:text-5xl font-bold text-white">92</span>
+                    <span class="text-xs lg:text-sm text-gray-300 uppercase tracking-wide mt-1">Performance</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Dark Gradient Background Section (starts from middle of prebuilt container) -->
-      <div
-        class="absolute top-1/2 left-0 right-0 bottom-0 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden"
-      >
-        <!-- Green glow effects on sides -->
-        <div
-          class="absolute left-0 top-1/3 w-96 h-96 bg-lime-500/20 rounded-full blur-3xl"
-        ></div>
-        <div
-          class="absolute right-0 top-1/3 w-96 h-96 bg-green-500/20 rounded-full blur-3xl"
-        ></div>
-      </div>
+  <!-- mega menu showcase -->
+  <section id="mega-menu" class="py-16">
+    <div class="w-full max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Column: Mega Menu Showcase -->
+        <div class="relative lg:absolute lg:left-0 lg:w-1/2 lg:pr-12">
+          <div id="mega-menu-images-container"
+            class="bg-white rounded-3xl lg:rounded-l-none p-8 lg:p-12 shadow-2xl grid grid-cols-12 gap-4 lg:gap-6">
+            <!-- Mega Menu Showcase Images -->
+            <!-- Images will be injected here via JavaScript -->
+          </div>
+        </div>
 
-      <!-- Second Section (Testimonials) - Sits within dark background -->
-      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 py-12">
-        <!-- Glass Container -->
-        <div
-          class="bg-white/10 backdrop-blur-md rounded-3xl p-12 lg:p-16 border border-white/20 shadow-2xl"
-        >
-          <!-- Testimonials Header -->
-          <div class="text-center text-white mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">
-              4500+ Trusted Customers
+        <!-- Spacer for left column on desktop -->
+        <div class="hidden lg:block"></div>
+
+        <!-- Right Column: Content -->
+        <div class="space-y-8">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight leading-tight">
+              Next-Level Mega Menus for Ultimate UX
             </h2>
-            <p class="text-gray-400 text-lg">
-              See what our customers are saying about us
+            <p class="text-lg text-gray-500 leading-relaxed">
+              Create seamless, visually stunning navigation menus that engage
+              users and enhance their browsing experience on any device.
             </p>
           </div>
 
-          <!-- Testimonials Grid - Masonry Style -->
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
-            <!-- COLUMN 1 -->
-            <div class="space-y-6">
-              <!-- Testimonial 1 -->
+          <!-- Features List -->
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
               <div
-                class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg"
-              >
-                <div class="flex gap-1 mb-4">
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                </div>
-                <p class="text-gray-300 mb-6 leading-relaxed">
-                  "This template is absolutely amazing! The design is modern and
-                  the code quality is top-notch. Highly recommended for any
-                  project."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-10 h-10 bg-lime-500 rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-gray-900 font-bold">JD</span>
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">John Doe</div>
-                    <div class="text-gray-500 text-sm">@johndoe</div>
-                  </div>
-                </div>
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-list text-lg text-gray-700"></i>
               </div>
-
-              <!-- Testimonial 4 -->
+              <span class="text-base font-medium text-gray-900">Mega Dropdown Support</span>
+            </li>
+            <li class="flex items-center gap-3">
               <div
-                class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg"
-              >
-                <div class="flex gap-1 mb-4">
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                </div>
-                <p class="text-gray-300 mb-6 leading-relaxed">
-                  "Clean code, beautiful design, and excellent performance. This
-                  template exceeded all my expectations. Five stars! The
-                  attention to detail is remarkable and the components are
-                  incredibly well-structured."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-white font-bold">EW</span>
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">Emily Wilson</div>
-                    <div class="text-gray-500 text-sm">@emilyw</div>
-                  </div>
-                </div>
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-palette text-lg text-gray-700"></i>
               </div>
-
-              <!-- Testimonial 7 -->
+              <span class="text-base font-medium text-gray-900">Animated Styles</span>
+            </li>
+            <li class="flex items-center gap-3">
               <div
-                class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg"
-              >
-                <div class="flex gap-1 mb-4">
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                </div>
-                <p class="text-gray-300 mb-6 leading-relaxed">
-                  "Absolutely perfect for my project! The components are
-                  well-organized and the design system is consistent
-                  throughout."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-white font-bold">RA</span>
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">Robert Anderson</div>
-                    <div class="text-gray-500 text-sm">@roberta</div>
-                  </div>
-                </div>
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-device-mobile text-lg text-gray-700"></i>
               </div>
-            </div>
-
-            <!-- COLUMN 2 -->
-            <div class="space-y-6">
-              <!-- Testimonial 2 -->
+              <span class="text-base font-medium text-gray-900">Mobile-Friendly Navigation</span>
+            </li>
+            <li class="flex items-center gap-3">
               <div
-                class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg"
-              >
-                <div class="flex gap-1 mb-4">
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                </div>
-                <p class="text-gray-300 mb-6 leading-relaxed">
-                  "Incredible attention to detail and beautiful animations. This
-                  saved me weeks of development time. Worth every penny! The
-                  documentation is comprehensive and the support team is
-                  amazing."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-white font-bold">SM</span>
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">Sarah Miller</div>
-                    <div class="text-gray-500 text-sm">@sarahm</div>
-                  </div>
-                </div>
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-gauge text-lg text-gray-700"></i>
               </div>
-
-              <!-- Testimonial 5 -->
-              <div
-                class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg"
-              >
-                <div class="flex gap-1 mb-4">
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                </div>
-                <p class="text-gray-300 mb-6 leading-relaxed">
-                  "Outstanding quality and fantastic customer service. The
-                  template is easy to customize and looks professional on all
-                  devices."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-white font-bold">DB</span>
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">David Brown</div>
-                    <div class="text-gray-500 text-sm">@davidb</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 8 -->
-              <div
-                class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg"
-              >
-                <div class="flex gap-1 mb-4">
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                </div>
-                <p class="text-gray-300 mb-6 leading-relaxed">
-                  "The best investment for my business. Professional design,
-                  clean code, and excellent documentation. Highly recommend! It
-                  has everything you need to build a stunning website quickly
-                  and efficiently."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-white font-bold">JM</span>
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">Jennifer Martinez</div>
-                    <div class="text-gray-500 text-sm">@jennm</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- COLUMN 3 -->
-            <div class="space-y-6">
-              <!-- Testimonial 3 -->
-              <div
-                class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg"
-              >
-                <div class="flex gap-1 mb-4">
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                </div>
-                <p class="text-gray-300 mb-6 leading-relaxed">
-                  "Best template I've ever purchased. The documentation is clear
-                  and the support team is incredibly responsive."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-white font-bold">MJ</span>
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">Michael Johnson</div>
-                    <div class="text-gray-500 text-sm">@mikej</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 6 -->
-              <div
-                class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg"
-              >
-                <div class="flex gap-1 mb-4">
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                </div>
-                <p class="text-gray-300 mb-6 leading-relaxed">
-                  "I've tried many templates before, but this one stands out.
-                  The attention to detail and smooth animations are impressive.
-                  Every component feels polished and production-ready."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-white font-bold">LT</span>
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">Lisa Taylor</div>
-                    <div class="text-gray-500 text-sm">@lisat</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 9 -->
-              <div
-                class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg"
-              >
-                <div class="flex gap-1 mb-4">
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                  <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
-                </div>
-                <p class="text-gray-300 mb-6 leading-relaxed">
-                  "Exceptional template with modern design patterns. The
-                  responsive layout works flawlessly across all screen sizes."
-                </p>
-                <div class="flex items-center gap-3">
-                  <div
-                    class="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center"
-                  >
-                    <span class="text-white font-bold">CG</span>
-                  </div>
-                  <div>
-                    <div class="text-white font-medium">Christopher Garcia</div>
-                    <div class="text-gray-500 text-sm">@chrisg</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ANIMATED TESTIMONIALS COLUMNS -->
-    <section id="testimonials" class="py-16 bg-white relative overflow-hidden">
-      <div class="w-full max-w-8xl mx-auto px-4 relative z-10">
-        <!-- Main Container with Columns on Sides -->
-        <div class="flex gap-6 items-center justify-center relative min-h-900">
-          <!-- LEFT COLUMNS -->
-          <div
-            class="hidden lg:flex gap-6 flex-1 max-h-[900px] overflow-hidden mask-gradient-vertical"
-          >
-            <!-- Left Column 1 -->
-            <div class="testimonial-column" data-column="0">
-              <div class="testimonial-scroll">
-                <!-- Images will be inserted here by JavaScript -->
-              </div>
-            </div>
-
-            <!-- Left Column 2 -->
-            <div class="testimonial-column" data-column="1">
-              <div class="testimonial-scroll">
-                <!-- Images will be inserted here by JavaScript -->
-              </div>
-            </div>
-          </div>
-
-          <!-- CENTER CONTENT -->
-          <div
-            class="flex flex-col items-center justify-center max-w-2xl mx-auto text-center px-8 z-10"
-          >
-            <div
-              class="inline-block border border-gray-300 py-1 px-4 rounded-lg text-sm font-medium text-gray-700 mb-5"
-            >
-              Design Inner Pages with Ease
-            </div>
-            <h2
-              class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight"
-            >
-              Perfect template for your website
-            </h2>
-            <p class="text-gray-600 text-lg leading-relaxed max-w-xl">
-              Access a curated collection of 1800+ pre-made inner page sections
-              designed for flawless, modern websites. Nexsas helps you deliver
-              elegant, trend-forward digital experiences.
-            </p>
-          </div>
-
-          <!-- RIGHT COLUMNS -->
-          <div
-            class="hidden lg:flex gap-6 flex-1 max-h-[900px] overflow-hidden mask-gradient-vertical"
-          >
-            <!-- Right Column 1 -->
-            <div class="testimonial-column" data-column="2">
-              <div class="testimonial-scroll">
-                <!-- Images will be inserted here by JavaScript -->
-              </div>
-            </div>
-
-            <!-- Right Column 2 -->
-            <div class="testimonial-column" data-column="3">
-              <div class="testimonial-scroll">
-                <!-- Images will be inserted here by JavaScript -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- footer cta & footer -->
-    <footer
-      class="relative bg-gradient-to-b from-gray-900 via-black to-black overflow-hidden"
-    >
-      <!-- Green Glow Effects -->
-      <div
-        class="absolute top-0 right-1/4 w-96 h-96 bg-lime-500/20 rounded-full blur-3xl"
-      ></div>
-      <div
-        class="absolute bottom-0 left-1/4 w-96 h-96 bg-lime-500/10 rounded-full blur-3xl"
-      ></div>
-
-      <!-- CTA Section -->
-      <div class="relative z-10 py-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <!-- Badge -->
-          <div class="inline-block mb-6">
-            <span
-              class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-white/10 text-white border border-white/20 backdrop-blur-sm"
-            >
-              A template to build an awesome website
-            </span>
-          </div>
-
-          <!-- Heading -->
-          <h2
-            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-          >
-            Get Started with The<br />Nexsas Today
-          </h2>
-
-          <!-- Description -->
-          <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
-            People worldwide love how easy it is to design and publish a
-            professional site with Nexsas themes.
-          </p>
+              <span class="text-base font-medium text-gray-900">Fast Loading Performance</span>
+            </li>
+          </ul>
 
           <!-- CTA Button -->
-          <a
-            href="#"
-            class="inline-flex items-center gap-2 px-8 py-4 bg-lime-500 hover:bg-lime-400 text-black font-semibold rounded-full transition-all duration-300 shadow-lg shadow-lime-500/50 hover:shadow-lime-500/70 hover:scale-105"
-          >
-            <span>Purchase</span>
-            <svg
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2.5"
-                d="M13 7l5 5m0 0l-5 5m5-5H6"
-              />
-            </svg>
-          </a>
+          <div>
+            <button
+              class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl">
+              Purchase Now
+              <i class="ph ph-arrow-right text-sm"></i>
+            </button>
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script src="resource/script/script.js"></script>
-  </body>
+  <!-- ready-made pages showcase -->
+  <section id="pages" class="py-16">
+    <div class="w-full max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Column: Content -->
+        <div class="space-y-8">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight leading-tight">
+              Explore 1900+ Stunning Ready-Made Pages
+            </h2>
+            <p class="text-lg text-gray-500 leading-relaxed">
+              Over 1900+ stunning ready-made, clean, and modular pages that
+              simplify content management and ensure full responsiveness on
+              all devices.
+            </p>
+          </div>
+
+          <!-- Features List -->
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-files text-lg text-gray-700"></i>
+              </div>
+              <span class="text-base font-medium text-gray-900">Diverse Page Templates</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-squares-four text-lg text-gray-700"></i>
+              </div>
+              <span class="text-base font-medium text-gray-900">Clean, Modular Design</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-pencil-simple text-lg text-gray-700"></i>
+              </div>
+              <span class="text-base font-medium text-gray-900">Easy Content Management</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                <i class="ph ph-monitor text-lg text-gray-700"></i>
+              </div>
+              <span class="text-base font-medium text-gray-900">Fully Responsive Layouts</span>
+            </li>
+          </ul>
+
+          <!-- CTA Button -->
+          <div>
+            <button
+              class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl">
+              Purchase Now
+              <i class="ph ph-arrow-right text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Page Templates Showcase -->
+        <div class="relative lg:absolute lg:right-0 lg:w-1/2 lg:pl-12">
+          <div id="pages-showcase-container"
+            class="bg-white rounded-3xl lg:rounded-r-none p-8 lg:p-12 shadow-2xl grid grid-cols-2 gap-4 lg:gap-6">
+            <!-- Pages showcase images will be injected here via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- prebuilt sections showcase -->
+  <section id="sections" class="relative py-24">
+    <!-- Prebuilt Sections Container (overlaps the dark background) -->
+    <div class="w-full max-w-7xl mx-auto px-4 relative z-10 pb-12">
+      <!-- Main Container with Gradient Background -->
+      <div
+        class="relative bg-gradient-to-br from-purple-200 via-purple-100 to-blue-100 rounded-3xl p-12 lg:p-16 overflow-hidden">
+        <!-- Header Content -->
+        <div class="relative z-10 max-w-2xl mb-12">
+          <div
+            class="inline-block px-4 py-1 bg-white/80 backdrop-blur-sm rounded-full text-sm font-medium text-purple-600 mb-4">
+            Prebuilt Blocks
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight leading-tight">
+            Build Stunning Pages with Prebuilt Sections
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-6">
+            Instantly create over 1500+ prebuilt sections you can use with one
+            single click. Drag & drop, customize your workflow, save time, and
+            accelerate your development process.
+          </p>
+          <button
+            class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl">
+            Purchase Now
+            <i class="ph ph-arrow-right text-sm"></i>
+          </button>
+        </div>
+
+        <!-- Sections Grid - Masonry Style -->
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+          <!-- LEFT COLUMN -->
+          <div id="sections-left-column" class="space-y-6">
+            <!-- 3 Images will be injected here via JavaScript -->
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div id="sections-right-column" class="space-y-6">
+            <!-- 3 Images will be injected here via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dark Gradient Background Section (starts from middle of prebuilt container) -->
+    <div
+      class="absolute top-1/2 left-0 right-0 bottom-0 bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden">
+      <!-- Green glow effects on sides -->
+      <div class="absolute left-0 top-1/3 w-96 h-96 bg-lime-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute right-0 top-1/3 w-96 h-96 bg-green-500/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Second Section (Testimonials) - Sits within dark background -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 py-12">
+      <!-- Glass Container -->
+      <div class="bg-white/10 backdrop-blur-md rounded-3xl p-12 lg:p-16 border border-white/20 shadow-2xl">
+        <!-- Testimonials Header -->
+        <div class="text-center text-white mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            4500+ Trusted Customers
+          </h2>
+          <p class="text-gray-400 text-lg">
+            See what our customers are saying about us
+          </p>
+        </div>
+
+        <!-- Testimonials Grid - Masonry Style -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+          <!-- COLUMN 1 -->
+          <div class="space-y-6">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg">
+              <div class="flex gap-1 mb-4">
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                "This template is absolutely amazing! The design is modern and
+                the code quality is top-notch. Highly recommended for any
+                project."
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-lime-500 rounded-full flex items-center justify-center">
+                  <span class="text-gray-900 font-bold">JD</span>
+                </div>
+                <div>
+                  <div class="text-white font-medium">John Doe</div>
+                  <div class="text-gray-500 text-sm">@johndoe</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg">
+              <div class="flex gap-1 mb-4">
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                "Clean code, beautiful design, and excellent performance. This
+                template exceeded all my expectations. Five stars! The
+                attention to detail is remarkable and the components are
+                incredibly well-structured."
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold">EW</span>
+                </div>
+                <div>
+                  <div class="text-white font-medium">Emily Wilson</div>
+                  <div class="text-gray-500 text-sm">@emilyw</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg">
+              <div class="flex gap-1 mb-4">
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                "Absolutely perfect for my project! The components are
+                well-organized and the design system is consistent
+                throughout."
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold">RA</span>
+                </div>
+                <div>
+                  <div class="text-white font-medium">Robert Anderson</div>
+                  <div class="text-gray-500 text-sm">@roberta</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMN 2 -->
+          <div class="space-y-6">
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg">
+              <div class="flex gap-1 mb-4">
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                "Incredible attention to detail and beautiful animations. This
+                saved me weeks of development time. Worth every penny! The
+                documentation is comprehensive and the support team is
+                amazing."
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold">SM</span>
+                </div>
+                <div>
+                  <div class="text-white font-medium">Sarah Miller</div>
+                  <div class="text-gray-500 text-sm">@sarahm</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg">
+              <div class="flex gap-1 mb-4">
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                "Outstanding quality and fantastic customer service. The
+                template is easy to customize and looks professional on all
+                devices."
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold">DB</span>
+                </div>
+                <div>
+                  <div class="text-white font-medium">David Brown</div>
+                  <div class="text-gray-500 text-sm">@davidb</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg">
+              <div class="flex gap-1 mb-4">
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                "The best investment for my business. Professional design,
+                clean code, and excellent documentation. Highly recommend! It
+                has everything you need to build a stunning website quickly
+                and efficiently."
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold">JM</span>
+                </div>
+                <div>
+                  <div class="text-white font-medium">Jennifer Martinez</div>
+                  <div class="text-gray-500 text-sm">@jennm</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMN 3 -->
+          <div class="space-y-6">
+            <!-- Testimonial 3 -->
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg">
+              <div class="flex gap-1 mb-4">
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                "Best template I've ever purchased. The documentation is clear
+                and the support team is incredibly responsive."
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold">MJ</span>
+                </div>
+                <div>
+                  <div class="text-white font-medium">Michael Johnson</div>
+                  <div class="text-gray-500 text-sm">@mikej</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg">
+              <div class="flex gap-1 mb-4">
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                "I've tried many templates before, but this one stands out.
+                The attention to detail and smooth animations are impressive.
+                Every component feels polished and production-ready."
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold">LT</span>
+                </div>
+                <div>
+                  <div class="text-white font-medium">Lisa Taylor</div>
+                  <div class="text-gray-500 text-sm">@lisat</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-lime-500/50 transition-all duration-300 shadow-lg">
+              <div class="flex gap-1 mb-4">
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+                <i class="ph-fill ph-star text-yellow-400 text-lg"></i>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                "Exceptional template with modern design patterns. The
+                responsive layout works flawlessly across all screen sizes."
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold">CG</span>
+                </div>
+                <div>
+                  <div class="text-white font-medium">Christopher Garcia</div>
+                  <div class="text-gray-500 text-sm">@chrisg</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANIMATED TESTIMONIALS COLUMNS -->
+  <section id="testimonials" class="py-16 bg-white relative overflow-hidden">
+    <div class="w-full max-w-8xl mx-auto px-4 relative z-10">
+      <!-- Main Container with Columns on Sides -->
+      <div class="flex gap-6 items-center justify-center relative min-h-900">
+        <!-- LEFT COLUMNS -->
+        <div class="hidden lg:flex gap-6 flex-1 max-h-[900px] overflow-hidden mask-gradient-vertical">
+          <!-- Left Column 1 -->
+          <div class="testimonial-column" data-column="0">
+            <div class="testimonial-scroll">
+              <!-- Images will be inserted here by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Left Column 2 -->
+          <div class="testimonial-column" data-column="1">
+            <div class="testimonial-scroll">
+              <!-- Images will be inserted here by JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <!-- CENTER CONTENT -->
+        <div class="flex flex-col items-center justify-center max-w-2xl mx-auto text-center px-8 z-10">
+          <div class="inline-block border border-gray-300 py-1 px-4 rounded-lg text-sm font-medium text-gray-700 mb-5">
+            Design Inner Pages with Ease
+          </div>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
+            Perfect template for your website
+          </h2>
+          <p class="text-gray-600 text-lg leading-relaxed max-w-xl">
+            Access a curated collection of 1800+ pre-made inner page sections
+            designed for flawless, modern websites. Nexsas helps you deliver
+            elegant, trend-forward digital experiences.
+          </p>
+        </div>
+
+        <!-- RIGHT COLUMNS -->
+        <div class="hidden lg:flex gap-6 flex-1 max-h-[900px] overflow-hidden mask-gradient-vertical">
+          <!-- Right Column 1 -->
+          <div class="testimonial-column" data-column="2">
+            <div class="testimonial-scroll">
+              <!-- Images will be inserted here by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Right Column 2 -->
+          <div class="testimonial-column" data-column="3">
+            <div class="testimonial-scroll">
+              <!-- Images will be inserted here by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer cta & footer -->
+  <footer class="relative bg-gradient-to-b from-gray-900 via-black to-black overflow-hidden">
+    <!-- Green Glow Effects -->
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-lime-500/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-lime-500/10 rounded-full blur-3xl"></div>
+
+    <!-- CTA Section -->
+    <div class="relative z-10 py-20 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Badge -->
+        <div class="inline-block mb-6">
+          <span
+            class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-white/10 text-white border border-white/20 backdrop-blur-sm">
+            A template to build an awesome website
+          </span>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          Get Started with The<br />Nexsas Today
+        </h2>
+
+        <!-- Description -->
+        <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+          People worldwide love how easy it is to design and publish a
+          professional site with Nexsas themes.
+        </p>
+
+        <!-- CTA Button -->
+        <a href="#"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-lime-500 hover:bg-lime-400 text-black font-semibold rounded-full transition-all duration-300 shadow-lg shadow-lime-500/50 hover:shadow-lime-500/70 hover:scale-105">
+          <span>Purchase</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="resource/script/script.js"></script>
+</body>
+
 </html>

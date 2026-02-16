@@ -112,9 +112,11 @@ body {
   .nav-item span {
     display: none;
   }
+
   .nav-item .icon {
     display: inline-block;
   }
+
   .nav-item {
     padding: 0.5rem 1rem;
   }
@@ -537,10 +539,12 @@ body {
 
 /* Floating Animations */
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -555,6 +559,7 @@ body {
 .delay-1 {
   animation-delay: 0.5s;
 }
+
 .delay-2 {
   animation-delay: 1s;
 }
@@ -620,10 +625,12 @@ body {
     width: 16rem;
     height: 16rem;
   }
+
   .collage-img-2 {
     width: 14rem;
     height: 14rem;
   }
+
   .collage-img-3 {
     width: 12rem;
     height: 12rem;
@@ -690,9 +697,11 @@ body {
   .portfolio-intro {
     padding: 2rem 0 4rem;
   }
+
   .portfolio-heading .highlight-text {
     font-size: 5rem;
   }
+
   .portfolio-heading .sub-heading {
     font-size: 2rem;
   }
@@ -702,6 +711,7 @@ body {
   0% {
     transform: translate(0, 0);
   }
+
   100% {
     transform: translate(40px, 40px);
   }
@@ -721,7 +731,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; /* Prevent shrinking in the grid */
+  flex-shrink: 0;
+  /* Prevent shrinking in the grid */
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -735,14 +746,16 @@ body {
   cursor: pointer;
   background: white;
   border-radius: 1.5rem;
-  padding: 0.5rem; /* p-2 */
+  padding: 0.5rem;
+  /* p-2 */
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   box-shadow: none;
   overflow: hidden;
-  text-decoration: none; /* Ensure it looks like a card even if it's an 'a' tag */
+  text-decoration: none;
+  /* Ensure it looks like a card even if it's an 'a' tag */
 }
 
 .portfolio-card-image {
@@ -757,7 +770,7 @@ body {
 .portfolio-card-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .portfolio-card-content {
@@ -885,7 +898,8 @@ body {
 }
 
 .dark .glowing-card-content {
-  background-color: #0f172a; /* Dark background */
+  background-color: #0f172a;
+  /* Dark background */
   border-color: #1e293b;
   box-shadow: 0px 0px 27px 0px rgba(45, 45, 45, 0.3);
 }
@@ -896,7 +910,8 @@ body {
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  opacity: 0; /* Hidden by default, script toggles opacity */
+  opacity: 0;
+  /* Hidden by default, script toggles opacity */
   transition: opacity 0.3s ease;
 }
 
@@ -919,25 +934,22 @@ body {
   -webkit-mask-clip: padding-box, border-box;
   mask-clip: padding-box, border-box;
   -webkit-mask-composite: xor;
-  mask-composite: intersect; /* Use intersect for standard */
+  mask-composite: intersect;
+  /* Use intersect for standard */
 
   -webkit-mask-image:
     linear-gradient(#0000, #0000),
-    conic-gradient(
-      from calc((var(--start) - var(--spread)) * 1deg),
+    conic-gradient(from calc((var(--start) - var(--spread)) * 1deg),
       transparent 0deg,
       #fff,
-      transparent calc(var(--spread) * 2deg)
-    );
+      transparent calc(var(--spread) * 2deg));
 
   mask-image:
     linear-gradient(#0000, #0000),
-    conic-gradient(
-      from calc((var(--start) - var(--spread)) * 1deg),
+    conic-gradient(from calc((var(--start) - var(--spread)) * 1deg),
       transparent 0deg,
       #fff,
-      transparent calc(var(--spread) * 2deg)
-    );
+      transparent calc(var(--spread) * 2deg));
 }
 
 .carousel-section {
@@ -982,6 +994,7 @@ body {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -1006,7 +1019,8 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 450px; /* Increased to match taller images */
+  height: 450px;
+  /* Increased to match taller images */
   background: linear-gradient(180deg, rgba(234, 236, 235, 0) 0%, #eaeceb 85%);
   pointer-events: none;
   z-index: 2;
@@ -1163,20 +1177,16 @@ body {
 
 /* Mask Gradients */
 .mask-gradient-vertical {
-  mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    black 25%,
-    black 75%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    black 25%,
-    black 75%,
-    transparent
-  );
+  mask-image: linear-gradient(to bottom,
+      transparent,
+      black 25%,
+      black 75%,
+      transparent);
+  -webkit-mask-image: linear-gradient(to bottom,
+      transparent,
+      black 25%,
+      black 75%,
+      transparent);
 }
 
 /* Marquee Animation Classes */

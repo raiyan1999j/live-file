@@ -129,14 +129,13 @@ document.addEventListener("DOMContentLoaded", () => {
    ========================================= */
 const carouselConfig = {
   images: [
-    "resource/image/lightmode/dashboard.png",
-    "resource/image/lightmode/all-campaigns.png",
-    "resource/image/lightmode/create-new.png",
-    "resource/image/lightmode/ai-generator.png",
-    "resource/image/darkmode/dashboard.png",
-    "resource/image/darkmode/all-campaigns.png",
-    "resource/image/darkmode/create-new.png",
-    "resource/image/darkmode/ai-generator.png",
+    "resource/image/dashboard1.png",
+    "resource/image/allcampaign.png",
+    "resource/image/createnew.png",
+    "resource/image/mysummery.png",
+    "resource/image/dashboard2.png",
+    "resource/image/dashboard3.png",
+    "resource/image/notifications.png",
   ],
 };
 
@@ -174,35 +173,101 @@ function initCarousel() {
    Portfolio Grid Logic (Demos)
    ========================================= */
 
-// To use: Create 'lightmode' & 'darkmode' folders in 'resource/image/'
-// and name files matching the 'name' property below.
+// Updated to match all 57 images found in resource/image/
 const portfolioData = [
-  { name: "dashboard", title: "Main Dashboard" },
-  { name: "dashboard-1", title: "E-commerce Overview" },
-  { name: "dashboard-2", title: "SaaS Analytics" },
-  { name: "my-summary", title: "Personal Summary" },
-  { name: "notifications", title: "Notification Center" },
-  { name: "all-campaigns", title: "Campaign Manager" },
-  { name: "create-new", title: "Campaign Builder" },
-  { name: "drafts", title: "Draft Campaigns" },
-  { name: "scheduled", title: "Scheduled Tasks" },
-  { name: "sent", title: "Sent Analytics" },
-  { name: "ai-generator", title: "AI Campaign Tool" },
-  { name: "subject-line-ai", title: "AI Subject Line" },
-  { name: "ab-testing", title: "A/B Test Center" },
-  { name: "email-templates", title: "Template Library" },
-  { name: "saved-layouts", title: "Custom Layouts" },
-  { name: "snippets-blocks", title: "Content Blocks" },
+  { name: "dashboard1", title: "Dashboard 1", link: "index.html" },
+  { name: "dashboard2", title: "Dashboard 2", link: "dashboard1.html" },
+  { name: "dashboard3", title: "Dashboard 3", link: "dashboard2.html" },
+  { name: "mysummery", title: "My Summary", link: "mysummery.html" },
+  { name: "notifications", title: "Notifications", link: "notifications.html" },
+  { name: "allcampaign", title: "All Campaign", link: "allcampaigns.html" },
+  { name: "createnew", title: "Create New", link: "createnew.html" },
+  { name: "draft", title: "Draft", link: "draft.html" },
+  { name: "scheduled", title: "Scheduled", link: "scheduled.html" },
+  { name: "sent", title: "Sent", link: "sent.html" },
+  { name: "aigenerator", title: "AI Generator", link: "aigenerator.html" },
+  { name: "subjectlineai", title: "Subject Line AI", link: "subjectlineai.html" },
+  { name: "abtesting", title: "A/B Testing", link: "abtesting.html" },
+  { name: "emailtemplates", title: "Email Templates", link: "emailtemplates.html" },
+  { name: "savedlayouts", title: "Saved Layouts", link: "savedlayouts.html" },
+  { name: "snippetlayouts", title: "Snippet Layouts", link: "snippetsblocks.html" },
+  { name: "workflow", title: "Workflow", link: "workflow.html" },
+  { name: "trigger&Rules", title: "Trigger & Rules", link: "triggersrules.html" },
+  { name: "dripSequence", title: "Drip Sequence", link: "dripsequences.html" },
+  { name: "campaignCalender", title: "Campaign Calender", link: "campaigncalendar.html" },
+  { name: "sendTimeAi", title: "Send Time AI", link: "sendtimeai.html" },
+  { name: "abandonedCart", title: "Abandoned Cart", link: "abandonedcart.html" },
+  { name: "onboardingFlows", title: "Onboarding Flows", link: "onboardingflows.html" },
+  { name: "reEngagementFlows", title: "Re-Engagement Flows", link: "reengagementflows.html" },
+  { name: "allContacts", title: "All Contacts", link: "allcontacts.html" },
+  { name: "segments", title: "Segments", link: "segments.html" },
+  { name: "tags&attribute", title: "Tags & Attribute", link: "tagsattributes.html" },
+  { name: "companiesAccount", title: "Companies Account", link: "companiesaccounts.html" },
+  { name: "dealsPipelines", title: "Deals Pipelines", link: "dealspipelines.html" },
+  { name: "task&Flowup", title: "Task & Follow-up", link: "tasksfollowup.html" },
+  { name: "riskInsights", title: "Risk Insights", link: "riskinsights.html" },
+  { name: "targetGroups", title: "Target Groups", link: "targetgroups.html" },
+  { name: "segmentsAi", title: "Segments AI", link: "segmentsai.html" },
+  { name: "overview1", title: "Overview 1", link: "overview.html" },
+  { name: "overview2", title: "Overview 2", link: "overview2.html" },
+  { name: "campaignPerformance", title: "Campaign Performance", link: "campaignperformance.html" },
+  { name: "automationStats", title: "Automation Stats", link: "automationstats.html" },
+  { name: "contactInsight", title: "Contact Insight", link: "contactinsights.html" },
+  { name: "emailDeliverabililty", title: "Email Deliverability", link: "emaildeliverability.html" },
+  { name: "exportReport", title: "Export Report", link: "exportreports.html" },
+  { name: "conversionReport", title: "Conversion Report", link: "conversionreport.html" },
+  { name: "spamMonitoring", title: "Spam Monitoring", link: "spammonitoring.html" },
+  { name: "domain", title: "Domain", link: "domain.html" },
+  { name: "emailVerification", title: "Email Verification", link: "emailverification.html" },
+  { name: "inboxPreview", title: "Inbox Preview", link: "inboxpreview.html" },
+  { name: "linkTracker", title: "Link Tracker", link: "linktracker.html" },
+  { name: "spamChecker", title: "Spam Checker", link: "spamchecker.html" },
+  { name: "CRMIntegration", title: "CRM Integration", link: "crmintegrations.html" },
+  { name: "eCommerceIntegration", title: "E-Commerce Integration", link: "ecommerceintegrations.html" },
+  { name: "webhooksApi", title: "Webhooks API", link: "webhooksapikeys.html" },
+  { name: "billing&Subscription", title: "Billing & Subscription", link: "billingsubscription.html" },
+  { name: "emailSendingSetting", title: "Email Sending Setting", link: "emailsettings.html" },
+  { name: "user&Roles", title: "User & Roles", link: "usersroles.html" },
+  { name: "workplace&Branding", title: "Workplace & Branding", link: "workplacebranding.html" },
+  { name: "documentaion", title: "Documentation", link: "documentation.html" },
+  { name: "supportTickets", title: "Support Tickets", link: "supporttickets.html" },
+  { name: "systemStatus", title: "System Status", link: "systemstatus.html" },
 ];
+
+const BASE_URL = "https://outreachly-phi.vercel.app/";
 
 const portfolioItems = portfolioData.map((item, i) => ({
   id: i + 1,
   title: item.title,
-  lightImage: `resource/image/lightmode/${item.name}.png`,
-  darkImage: `resource/image/darkmode/${item.name}.png`,
-  lightLink: "#",
-  darkLink: "#",
+  lightImage: `resource/image/${item.name}.png`,
+  darkImage: `resource/image/${item.name}.png`,
+  link: `${BASE_URL}${item.link}`,
 }));
+
+window.previewWithTheme = function (url, theme) {
+  const isDark = theme === "dark";
+
+  // 1. Storage Injection (Works if on the same domain)
+  // Matching Alpine.js $persist format from your screenshot:
+  // Booleans are stored as "true" or "false"
+  // Strings are stored with quotes like ""light""
+  try {
+    localStorage.setItem("_x_isDarkMode", isDark ? "true" : "false");
+    localStorage.setItem("_x_theme", JSON.stringify(theme));
+    localStorage.setItem("_x_contrast", JSON.stringify("low"));
+    localStorage.setItem("_x_stretch", "false");
+    localStorage.setItem("primaryColor", "142 51 255");
+  } catch (e) {
+    console.warn("Cross-origin storage blocked. Relying on URL parameters.");
+  }
+
+  // 2. URL Parameter Injection (DEFINITIVE FIX)
+  // Your project code looks for: const isDark = urlParams.darkMode === 'true' || urlParams.darkMode === 'dark'
+  const separator = url.includes("?") ? "&" : "?";
+  const targetUrl = `${url}${separator}darkMode=${isDark ? "dark" : "light"}`;
+
+  window.open(targetUrl, "_blank");
+};
 
 function renderPortfolio() {
   const grid = document.getElementById("portfolio-grid");
@@ -212,24 +277,26 @@ function renderPortfolio() {
     .map(
       (item) => `
       <div class="portfolio-item-wrapper group">
-        <a id="card-link-${item.id}" href="${item.lightLink}" target="_blank" class="portfolio-card hero-reveal" style="transition-delay: 0.1s">
+        <div class="portfolio-card hero-reveal" style="transition-delay: 0.1s">
           <div class="portfolio-card-image relative z-10">
-            <img id="card-img-${item.id}" src="${item.lightImage}" alt="${item.title}" />
+          <div>
+            <img src="${item.lightImage}" alt="${item.title}" class="w-full h-full" />
+          </div>
             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 z-20">
-               <button class="bg-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all transform translate-y-4 group-hover:translate-y-0 duration-300" 
-                       onclick="event.preventDefault(); event.stopPropagation(); updateCard(${item.id}, '${item.lightImage}', '${item.lightLink}', this, 'light')">
-                 <i class="ph ph-sun text-xl"></i>
+               <button class="bg-white px-4 h-10 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 text-sm font-semibold" 
+                       onclick="event.preventDefault(); event.stopPropagation(); previewWithTheme('${item.link}', 'light')">
+                 Light
                </button>
-               <button class="bg-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75" 
-                       onclick="event.preventDefault(); event.stopPropagation(); updateCard(${item.id}, '${item.darkImage}', '${item.darkLink}', this, 'dark')">
-                 <i class="ph ph-moon text-xl"></i>
+               <button class="bg-white px-4 h-10 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75 text-sm font-semibold" 
+                       onclick="event.preventDefault(); event.stopPropagation(); previewWithTheme('${item.link}', 'dark')">
+                 Dark
                </button>
             </div>
           </div>
           <div class="portfolio-card-content relative z-10">
             <h3 class="portfolio-card-title">${item.title}</h3>
           </div>
-        </a>
+        </div>
       </div>
     `,
     )
@@ -250,30 +317,6 @@ function renderPortfolio() {
     .forEach((el) => revealObserver.observe(el));
 }
 
-function updateCard(id, imgSrc, linkUrl, btn, mode) {
-  const img = document.getElementById(`card-img-${id}`);
-  const link = document.getElementById(`card-link-${id}`);
-
-  if (img && link) {
-    img.style.opacity = "0.5";
-    img.style.filter = "blur(10px)";
-    setTimeout(() => {
-      img.src = imgSrc;
-      link.href = linkUrl;
-      img.style.opacity = "1";
-      img.style.filter = "blur(0px)";
-    }, 250);
-  }
-
-  if (btn) {
-    const buttons = btn.parentElement.querySelectorAll("button");
-    buttons.forEach((b) => {
-      b.style.backgroundColor = "";
-      b.classList.remove("ring-2", "ring-blue-500");
-    });
-    btn.style.border = "2px solid #0ea5e9";
-  }
-}
 
 /* =========================================
    Feature Section (Glowing Effect Logic)
@@ -364,22 +407,22 @@ function initMegaMenuShowcase() {
 
   const blocks = [
     {
-      src: "resource/image/lightmode/dashboard.png",
+      src: "resource/image/dashboard1.png",
       span: "col-span-12 lg:col-span-7",
       height: "h-[250px]",
     },
     {
-      src: "resource/image/lightmode/email-templates.png",
+      src: "resource/image/dashboard2.png",
       span: "col-span-12 lg:col-span-5",
       height: "h-[250px]",
     },
     {
-      src: "resource/image/lightmode/all-campaigns.png",
+      src: "resource/image/allcampaign.png",
       span: "col-span-12 lg:col-span-4",
       height: "h-[220px]",
     },
     {
-      src: "resource/image/lightmode/scheduled.png",
+      src: "resource/image/notifications.png",
       span: "col-span-12 lg:col-span-8",
       height: "h-[220px]",
     },
@@ -406,19 +449,19 @@ function initPagesShowcase() {
 
   const pages = [
     {
-      src: "resource/image/lightmode/ai-generator.png",
+      src: "resource/image/dashboard1.png",
       height: "h-48 md:h-64",
     },
     {
-      src: "resource/image/lightmode/notifications.png",
+      src: "resource/image/notifications.png",
       height: "h-40 md:h-52",
     },
     {
-      src: "resource/image/lightmode/saved-layouts.png",
+      src: "resource/image/mysummery.png",
       height: "h-44 md:h-60",
     },
     {
-      src: "resource/image/lightmode/subject-line-ai.png",
+      src: "resource/image/dashboard3.png",
       height: "h-52 md:h-72",
     },
   ];
@@ -440,15 +483,15 @@ function initPrebuiltSectionsShowcase() {
   if (!leftCol || !rightCol) return;
 
   const leftImages = [
-    { src: "resource/image/lightmode/dashboard.png", height: "h-[450px]" },
-    { src: "resource/image/lightmode/all-campaigns.png", height: "h-[320px]" },
-    { src: "resource/image/lightmode/scheduled.png", height: "h-[500px]" },
+    { src: "resource/image/dashboard1.png", height: "h-[450px]" },
+    { src: "resource/image/allcampaign.png", height: "h-[320px]" },
+    { src: "resource/image/dashboard2.png", height: "h-[500px]" },
   ];
   const rightImages = [
-    { src: "resource/image/lightmode/ai-generator.png", height: "h-[350px]" },
-    { src: "resource/image/lightmode/notifications.png", height: "h-[550px]" },
+    { src: "resource/image/dashboard3.png", height: "h-[350px]" },
+    { src: "resource/image/notifications.png", height: "h-[550px]" },
     {
-      src: "resource/image/lightmode/email-templates.png",
+      src: "resource/image/createnew.png",
       height: "h-[400px]",
     },
   ];
@@ -471,28 +514,28 @@ function initPrebuiltSectionsShowcase() {
 const testimonialsConfig = {
   columns: [
     [
-      "resource/image/lightmode/dashboard.png",
-      "resource/image/lightmode/ai-generator.png",
-      "resource/image/lightmode/all-campaigns.png",
-      "resource/image/lightmode/ab-testing.png",
+      "resource/image/dashboard1.png",
+      "resource/image/dashboard2.png",
+      "resource/image/allcampaign.png",
+      "resource/image/createnew.png",
     ],
     [
-      "resource/image/lightmode/notifications.png",
-      "resource/image/lightmode/saved-layouts.png",
-      "resource/image/lightmode/scheduled.png",
-      "resource/image/lightmode/email-templates.png",
+      "resource/image/notifications.png",
+      "resource/image/mysummery.png",
+      "resource/image/dashboard3.png",
+      "resource/image/dashboard1.png",
     ],
     [
-      "resource/image/lightmode/create-new.png",
-      "resource/image/lightmode/dashboard-1.png",
-      "resource/image/lightmode/dashboard-2.png",
-      "resource/image/lightmode/drafts.png",
+      "resource/image/createnew.png",
+      "resource/image/dashboard1.png",
+      "resource/image/dashboard2.png",
+      "resource/image/allcampaign.png",
     ],
     [
-      "resource/image/lightmode/my-summary.png",
-      "resource/image/lightmode/sent.png",
-      "resource/image/lightmode/snippets-blocks.png",
-      "resource/image/lightmode/subject-line-ai.png",
+      "resource/image/mysummery.png",
+      "resource/image/dashboard3.png",
+      "resource/image/notifications.png",
+      "resource/image/dashboard1.png",
     ],
   ],
 };
@@ -512,7 +555,7 @@ function initImageTestimonials() {
       images.forEach((imageUrl, imgIndex) => {
         html += `
           <div class="testimonial-image-card w-[240px] h-[463px] bg-white rounded-2xl overflow-hidden shadow-lg mb-6 hover:shadow-xl transition-shadow duration-300">
-            <img src="${imageUrl}" alt="Preview ${imgIndex + 1}" class="w-full h-full object-contain bg-gray-50" loading="lazy" />
+            <img src="${imageUrl}" alt="Preview ${imgIndex + 1}" class="w-full h-full object-cover bg-gray-50" loading="lazy" />
           </div>`;
       });
     }
